@@ -1,0 +1,57 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #F4F6FA; color: #1A2233; }
+.app { display: flex; min-height: 100vh; }
+
+.sidebar { width: 220px; background: #0A0F1E; padding: 24px 0; flex-shrink: 0; }
+.brand { color: #E8ECF4; font-size: 18px; font-weight: 700; padding: 0 24px 28px; }
+.brand span { color: #4C8DFF; }
+.nav-item { padding: 12px 24px; color: #8791A8; font-size: 13.5px; cursor: pointer; border-left: 3px solid transparent; }
+.nav-item.active, .nav-item:hover { color: #fff; background: #141C33; border-left: 3px solid #4C8DFF; }
+
+.main { flex: 1; display: flex; flex-direction: column; }
+.topbar { height: 64px; background: #fff; border-bottom: 1px solid #E4E8F0; display: flex; align-items: center; padding: 0 28px; }
+.topbar h1 { font-size: 18px; font-weight: 600; }
+
+.content { padding: 24px 28px; flex: 1; }
+
+.panel, .table-wrap { background: #fff; border: 1px solid #E4E8F0; border-radius: 10px; margin-bottom: 20px; }
+.panel { padding: 20px 22px; }
+.panel h2 { font-size: 14px; margin-bottom: 16px; }
+
+.form-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.field { flex: 1; min-width: 150px; }
+.field label { display: block; font-size: 11.5px; color: #7A8399; margin-bottom: 6px; font-weight: 600; }
+.field input { width: 100%; padding: 9px 10px; border: 1px solid #DCE1EA; border-radius: 6px; font-size: 13px; }
+
+.btn-row { display: flex; gap: 10px; margin-top: 18px; }
+.btn { padding: 10px 22px; border-radius: 6px; font-size: 13px; font-weight: 600; border: none; cursor: pointer; color: #fff; }
+.btn-buy { background: #1D9E75; }
+.btn-sell { background: #D85A30; }
+.form-error { color: #A32D2D; font-size: 12.5px; margin-top: 10px; }
+
+.table-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid #E4E8F0; }
+.table-header h2 { font-size: 14px; }
+.muted { font-size: 12px; color: #8791A8; }
+
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: 11px; color: #8791A8; text-transform: uppercase; padding: 10px 20px; border-bottom: 1px solid #EDF0F5; }
+td { padding: 12px 20px; font-size: 13px; border-bottom: 1px solid #F2F4F8; }
+
+.status { font-size: 11px; padding: 4px 10px; border-radius: 12px; font-weight: 600; display: inline-block; }
+.status-SETTLED, .status-FILLED, .status-CONFIRMED { background: #E1F5EE; color: #0F6E56; }
+.status-PARTIALLY_FILLED, .status-CLEARING { background: #E6F1FB; color: #185FA5; }
+.status-PENDING_VALIDATION, .status-VALIDATED, .status-ROUTED { background: #FAEEDA; color: #854F0B; }
+.status-REJECTED, .status-FAILED { background: #FCEBEB; color: #A32D2D; }
+
+.side-BUY { color: #0F6E56; font-weight: 600; }
+.side-SELL { color: #993C1D; font-weight: 600; }
+
+.progress-bar { width: 100px; height: 6px; background: #EDF0F5; border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: #4C8DFF; }
+
+.stat-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.stat { flex: 1; min-width: 160px; background: #fff; border: 1px solid #E4E8F0; border-radius: 10px; padding: 16px 18px; }
+.stat .label { font-size: 11.5px; color: #8791A8; font-weight: 600; margin-bottom: 8px; }
+.stat .value { font-size: 22px; font-weight: 700; }
+
+.view[hidden] { display: none; }
